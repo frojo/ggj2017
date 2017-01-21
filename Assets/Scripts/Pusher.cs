@@ -3,21 +3,29 @@ using System.Collections;
 
 public class Pusher : MonoBehaviour {
 
+	public Camera main_camera;
+
+	// Island that the pusher is being sent out from
+	//public GameObject island;
+
 	public Vector2 start_point;
 	public Vector2 end_point;
 
+	public Vector2 direction;
+
 	public float speed;
+
+	// Constant to compute end_point for a new Pusher
+	public float far_enough;
 
 	// Use this for initialization
 	void Start () {
-		start_point = transform.position;
+		transform.position = start_point;
+		end_point = start_point + direction*far_enough;
 
-		// Rotate dolphin so that it goes in straight line
-
-		Vector2 difference = end_point - start_point;
-		float sign = (end_point.x < start_point.x)? 1.0f : -1.0f;
-		float angle = Vector2.Angle(Vector2.up, difference);
-		transform.Rotate (Vector3.forward*angle*sign);
+		// Rotate pusher so that it goes in straight line
+		float angle = AngleBetweenTwoVectors (start_point, end_point);
+		transform.Rotate (Vector3.forward*angle);
 	}
 
 	// Update is called once per frame
@@ -38,10 +46,16 @@ public class Pusher : MonoBehaviour {
 		}
 	}
 
-	// Call this to properly initialize the pusher
-	void Init(Vector2 click_coordinates) {
-		
-		
+	// Converts screen coordinates to a world position
+	void ScreenCoordsToWorldPosition(Vector2 screen_coordinates) {
 
 	}
+
+	float AngleBetweenTwoVectors(Vector2 a, Vector2 b) {
+		Vector2 difference = b - a;
+		float sign = (b.x < a.x)? 1.0f : -1.0f;
+		float angle = Vector2.Angle(Vector2.up, difference) * sign;
+		return angle;
+	}
+		
 }
