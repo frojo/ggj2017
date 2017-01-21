@@ -40,11 +40,11 @@ public class Pusher : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Enemy") {
-			other.GetComponent<Surfer>().InitiatePush(end_point, speed);
-		}
-	}
+//	void OnTriggerEnter2D(Collider2D other) {
+//		if (other.tag == "Enemy") {
+//			other.GetComponent<Surfer>().InitiatePush(end_point, speed);
+//		}
+//	}
 
 	// Suicide when out of bounds
 	void OnBecomeInvisible() {
