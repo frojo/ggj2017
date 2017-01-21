@@ -720,8 +720,13 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
   - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
+  - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
+  - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
+  - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
+  - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
+  - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
   - {fileID: 21300000, guid: e6ad467c44bbe3043b0657a59c1c0a47, type: 3}
-  fps: 30
+  fps: 6
 --- !u!212 &1749535335
 SpriteRenderer:
   m_ObjectHideFlags: 0

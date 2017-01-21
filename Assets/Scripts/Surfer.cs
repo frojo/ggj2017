@@ -24,18 +24,25 @@ public class Surfer : MonoBehaviour {
 		end_point = island_position;
 		speed = surf_speed;
 
-        var dir = end_point - new Vector2(transform.position.x, transform.position.y);
-        GetComponent<AnimationAngleSelector>().SetDirection(dir);
-	}
+        
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        UpdateVisual();
 		transform.position = 
 			Vector2.MoveTowards (transform.position, end_point, speed * Time.deltaTime);
-	}
+    }
 
-	// Pushers/weapons call this to push the surfer away
-	public void InitiatePush (Vector2 push_destination, float push_speed) {
+    void UpdateVisual ()
+    {
+        var dir = island_position - new Vector2(transform.position.x, transform.position.y);
+        GetComponent<AnimationAngleSelector>().SetDirection(dir);
+    }
+
+    // Pushers/weapons call this to push the surfer away
+    public void InitiatePush (Vector2 push_destination, float push_speed) {
 		end_point = push_destination;
 		speed = push_speed;
 	}
