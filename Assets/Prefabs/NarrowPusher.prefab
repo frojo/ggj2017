@@ -211,7 +211,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -349,7 +349,7 @@ MonoBehaviour:
   main_camera: {fileID: 0}
   start_point: {x: 0.009, y: -3.884}
   end_point: {x: -7.1742573, y: 2.2444859}
-  direction: {x: -0.78682667, y: 0.6171741}
+  direction: {x: -0.019230174, y: 0.99981505}
   speed: 2
   far_enough: 10
 --- !u!114 &114000013416812478
