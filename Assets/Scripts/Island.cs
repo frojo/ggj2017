@@ -12,4 +12,10 @@ public class Island : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.tag == "Enemy") {
+			print ("Island hit!");
+		}
+	}
 }
