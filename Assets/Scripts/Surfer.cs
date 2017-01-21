@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SurferController : MonoBehaviour {
+public class Surfer : MonoBehaviour {
 
 	public GameObject island;
 	private Vector2 island_position;

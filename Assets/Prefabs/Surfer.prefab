@@ -21,8 +21,8 @@ GameObject:
   - 4: {fileID: 4000013000667540}
   - 58: {fileID: 58000014015540042}
   - 212: {fileID: 212000012429801034}
-  - 114: {fileID: 114000013849711152}
   - 50: {fileID: 50000012430415486}
+  - 114: {fileID: 114000012624503084}
   m_Layer: 0
   m_Name: Surfer
   m_TagString: Enemy
@@ -74,7 +74,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.0181096
---- !u!114 &114000013849711152
+--- !u!114 &114000012624503084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
