@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
 	public GameObject spawnee;
 
 	// Instantiates spawnee at 
-	void Spawn(GameObject spawnee) {
+	public void Spawn(GameObject spawnee) {
 		GameObject spawned = Instantiate (spawnee);
 		spawned.transform.position = transform.position;
 	}
