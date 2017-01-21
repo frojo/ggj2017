@@ -14,17 +14,16 @@ public class AnimationAngleSelector : MonoBehaviour {
     private GameObject lastActive = null;
 
     private Vector2 dir = Vector2.up;
-    private Vector2 oldDir;
 
     public void SetDirection(Vector2 direction)
     {
+        DisableAll();
         dir = direction.normalized;
+        UpdateVisual();
     }
 
-    void Start ()
+    void DisableAll ()
     {
-        oldDir = Vector2.zero;
-
         DisableGameObject(up);
         DisableGameObject(upRight);
         DisableGameObject(right);
@@ -35,13 +34,7 @@ public class AnimationAngleSelector : MonoBehaviour {
         DisableGameObject(upLeft);
     }
 
-    void Update () {
-        if (Vector2.Equals(dir, oldDir))
-        {
-            return;
-        }
-        oldDir = dir;
-
+    void UpdateVisual () {
         var toBeActive = lastActive;
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg / 45.0f;
         switch (Mathf.RoundToInt(angle) % 8)

@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AnimationAngleSelector))]
 public class Surfer : MonoBehaviour {
 
 	// Island that the surfer is approaching
-	public GameObject island;
+	private GameObject island;
 	Vector2 island_position;
 
 	// How fast the surfer approaches the island
@@ -17,9 +18,14 @@ public class Surfer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		island_position = island.transform.position;
+        island = GameObject.FindGameObjectWithTag("Island");
+        Debug.Assert(island != null, "no island found!", this);
+        island_position = island.transform.position;
 		end_point = island_position;
 		speed = surf_speed;
+
+        var dir = end_point - new Vector2(transform.position.x, transform.position.y);
+        GetComponent<AnimationAngleSelector>().SetDirection(dir);
 	}
 	
 	// Update is called once per frame
