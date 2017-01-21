@@ -68,9 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_camera: {fileID: 0}
-  start_point: {x: 0.05, y: -4.67}
+  start_point: {x: 0.009, y: -3.884}
   end_point: {x: -7.1742573, y: 2.2444859}
-  direction: {x: -0.8360206, y: 0.54869807}
+  direction: {x: -0.056621566, y: 0.9983957}
   speed: 2
   far_enough: 10
 --- !u!212 &212000010935048400
