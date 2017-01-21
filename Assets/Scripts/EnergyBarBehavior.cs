@@ -7,12 +7,7 @@ public class EnergyBarBehavior : MonoBehaviour {
     public float maxEnergy = 100;
     public float energyGainRate = 5; // per sec
     public float currentEnergy { get; private set; }
-    /*
-    private Vector2 maxDimension;
-    private Vector3 localScale;
 
-    private RectTransform rectTransform;
-    */
     private Image image;
     public static EnergyBarBehavior instance { get; private set; }
 
@@ -27,14 +22,6 @@ public class EnergyBarBehavior : MonoBehaviour {
     }
 
     void Start () {
-        /*
-        rectTransform = GetComponent<RectTransform>();
-
-        maxDimension = rectTransform.sizeDelta;
-        localScale = rectTransform.sizeDelta;
-        localScale.x = 0;
-        rectTransform.sizeDelta = localScale;
-        */
         image = GetComponent<Image>();
         currentEnergy = 0;
     }
@@ -52,10 +39,6 @@ public class EnergyBarBehavior : MonoBehaviour {
 
     void UpdateVisual()
     {
-        /*
-        localScale.x = maxDimension.x * currentEnergy / maxEnergy;
-        rectTransform.sizeDelta = localScale;
-        */
         image.fillAmount = currentEnergy / maxEnergy;
     }
 
