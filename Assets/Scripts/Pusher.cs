@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AnimationAngleSelector))]
 public class Pusher : MonoBehaviour {
 
 	public Camera main_camera;
@@ -26,6 +27,8 @@ public class Pusher : MonoBehaviour {
 		// Rotate pusher so that it goes in straight line
 		float angle = AngleBetweenTwoVectors (start_point, end_point);
 		transform.Rotate (Vector3.forward*angle);
+
+        GetComponent<AnimationAngleSelector>().SetDirection(direction);
 	}
 
 	// Update is called once per frame
