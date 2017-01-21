@@ -46,6 +46,11 @@ public class Pusher : MonoBehaviour {
 		}
 	}
 
+	// Suicide when out of bounds
+	void OnBecomeInvisible() {
+		Destroy (gameObject);
+	}
+
 	// Converts screen coordinates to a world position
 	void ScreenCoordsToWorldPosition(Vector2 screen_coordinates) {
 
@@ -58,4 +63,5 @@ public class Pusher : MonoBehaviour {
 		return angle;
 	}
 		
+
 }
