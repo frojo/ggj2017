@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AnimationAngleSelector))]
 public class Surfer : MonoBehaviour {
 
 	// Island that the surfer is approaching
@@ -20,6 +21,9 @@ public class Surfer : MonoBehaviour {
 		island_position = island.transform.position;
 		end_point = island_position;
 		speed = surf_speed;
+
+        var dir = end_point - new Vector2(transform.position.x, transform.position.y);
+        GetComponent<AnimationAngleSelector>().SetDirection(dir);
 	}
 	
 	// Update is called once per frame
