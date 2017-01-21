@@ -19,7 +19,7 @@ public class SkillBehavior : MonoBehaviour {
     {
         button.interactable = (energybar.currentEnergy >= energyCost);
 
-        if (Input.GetKeyDown(hotkey))
+        if (Input.GetKeyUp(hotkey))
         {
             button.onClick.Invoke();
         }
