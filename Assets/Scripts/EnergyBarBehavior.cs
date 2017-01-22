@@ -49,9 +49,14 @@ public class EnergyBarBehavior : MonoBehaviour {
         image.fillAmount = currentEnergy / maxEnergy;
     }
 
+    public bool HasEnergy(float amount)
+    {
+        return currentEnergy >= amount;
+    }
+
     public bool ConsumeEnergy(float amount)
     {
-        if (currentEnergy < amount)
+        if (!HasEnergy(amount))
         {
             return false;
         }

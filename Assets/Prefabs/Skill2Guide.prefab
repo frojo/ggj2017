@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000011082574672
 Transform:
   m_ObjectHideFlags: 1
@@ -77,12 +77,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011652571184}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a680c938f62748e479f9a238915e8810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pusher: {fileID: 1000012059353344, guid: 42dac91e376034e89800683e074deae5, type: 2}
+  pusher: {fileID: 0}
   tiki: {fileID: 0}
 --- !u!114 &114000012156657506
 MonoBehaviour:
@@ -125,6 +125,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec139b15563a775468d2719f3d4b60a4, type: 3}
-  m_Color: {r: 0.125, g: 1, b: 0.67413783, a: 0.416}
+  m_Color: {r: 0.125, g: 1, b: 0.67413783, a: 0.309}
   m_FlipX: 0
   m_FlipY: 0

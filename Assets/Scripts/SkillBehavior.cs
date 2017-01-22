@@ -6,19 +6,19 @@ using System.Collections;
 public class SkillBehavior : MonoBehaviour {
 
     public KeyCode hotkey = KeyCode.Q;
-    public float energyCost = 10;
     private EnergyBarBehavior energybar;
     private Button button;
-    public GameObject [] activationListeners;
+    public SkillActivator skillActivator;
 
     void Start () {
         energybar = EnergyBarBehavior.instance;
         button = GetComponent<Button>();
+        Debug.Assert(skillActivator != null, "no skill activator set", this);
     }
 
     public void Update()
     {
-        button.interactable = (energybar.currentEnergy >= energyCost);
+        button.interactable = (energybar.currentEnergy >= skillActivator.energyCost);
 
         if (Input.GetKeyUp(hotkey))
         {
@@ -28,12 +28,9 @@ public class SkillBehavior : MonoBehaviour {
     
     public void OnClick ()
     {
-        if (energybar.ConsumeEnergy(energyCost))
+        if (energybar.HasEnergy(skillActivator.energyCost))
         {
-            foreach (GameObject o in activationListeners)
-            {
-                o.SetActive(true);
-            }
+            skillActivator.gameObject.SetActive(true);
         }
         else
         {

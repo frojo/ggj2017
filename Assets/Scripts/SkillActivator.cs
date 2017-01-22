@@ -5,6 +5,7 @@ public class SkillActivator : MonoBehaviour {
 
     public GameObject pusher;
     public TikiBehavior tiki;
+    public float energyCost = 1;
 
     void OnEnable ()
     {
@@ -19,6 +20,7 @@ public class SkillActivator : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonUp(0))
         {
+            EnergyBarBehavior.instance.ConsumeEnergy(energyCost);
             gameObject.SetActive(false);
             InstantiatePusher (
                 Camera.main.ScreenToWorldPoint (Input.mousePosition));
