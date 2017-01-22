@@ -26,6 +26,8 @@ public class WaveController : MonoBehaviour {
 		print ("Starting waves!");
 		energy_bar = GameObject.FindGameObjectWithTag ("EnergyBar");
 		game_controller = GameObject.FindGameObjectWithTag ("GameController");
+
+		StartCoroutine(ShowWaveText (0));
 		StartCoroutine (WaveA0 ());
 	}
 	
@@ -55,15 +57,26 @@ public class WaveController : MonoBehaviour {
 		EndCurrentWave ();
 		switch (current_wave) {
 		case 1:
+			StartCoroutine(ShowWaveText (2));
 			StartCoroutine (WaveB0());
 			break;
 		case 2:
+			//ShowWaveText (1);
+			StartCoroutine(ShowWaveText (3));
 			StartCoroutine (WaveC0());
 			break;
 		case 3:
+			//ShowWaveText (2);
 			game_controller.GetComponent<GameController>().EndGame (true);
 			break;
 		}
+	}
+
+
+	public IEnumerator ShowWaveText (int waveNum){
+		waveTexts[waveNum].SetActive(true);
+		yield return new WaitForSeconds (3);
+		waveTexts[waveNum].SetActive(false);
 	}
 
 	// FIRST WAVE
