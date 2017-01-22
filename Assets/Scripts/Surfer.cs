@@ -37,6 +37,7 @@ public class Surfer : MonoBehaviour {
 			Vector2.MoveTowards (transform.position, end_point, speed * Time.deltaTime);
     }
 
+
     void UpdateVisual ()
     {
         var dir = island_position - new Vector2(transform.position.x, transform.position.y);

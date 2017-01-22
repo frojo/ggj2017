@@ -5,6 +5,8 @@ public class SkillActivator : MonoBehaviour {
 
     public GameObject pusher;
 	public GameObject attracter;
+	public GameObject disruptor;
+
     public TikiBehavior tiki;
     public float energyCost = 1;
 
@@ -37,11 +39,18 @@ public class SkillActivator : MonoBehaviour {
 			case 2:
 				InstantiateAttracter (mouse_world_position);
 				break;
+			case 3:
+				InstantiateDisruptor ();
+				break;
 			default:
 				break;
 			}
         }
     }
+
+	void InstantiateDisruptor() {
+		Instantiate (disruptor);
+	}
 
 	void InstantiateAttracter(Vector2 mouse_world_position) {
 		attracter.transform.position = mouse_world_position;
