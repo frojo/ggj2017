@@ -46,14 +46,17 @@ public class WaveController : MonoBehaviour {
 	public void EndCurrentWave() {
 		// Kill all the enemies on screen
 		GameObject[] all_enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		GameObject[] all_powers = GameObject.FindGameObjectsWithTag("Power");
 
         StopAllCoroutines();
 		foreach (GameObject enemy in all_enemies) {
 			Destroy (enemy);
 		}
+		foreach (GameObject power in all_powers) {
+			Destroy (power);
+		}
 		energy_bar.GetComponent<EnergyBarBehavior> ().ConsumeEnergy (
 			energy_bar.GetComponent<EnergyBarBehavior> ().maxEnergy);
-		print ("Done destroying Surfers!");
 	}
 
 	public void NextWave() {
@@ -119,15 +122,15 @@ public class WaveController : MonoBehaviour {
 	// SECOND WAVE
 
 	public IEnumerator WaveB0(){
-		tm_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		yield return new WaitForSeconds (2);
+		tm_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		yield return new WaitForSeconds (3);
 		StartCoroutine(WaveB1 ());
 	}
 
 	public IEnumerator WaveB1(){
-		bl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		br_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		yield return new WaitForSeconds (2);
+		bl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		br_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		yield return new WaitForSeconds (5);
 		StartCoroutine(WaveB2 ());
 	}
 
@@ -136,8 +139,17 @@ public class WaveController : MonoBehaviour {
 		fr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
 		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
 		tr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		yield return new WaitForSeconds (99999);
-//		StartCoroutine(WaveB3 ());
+		yield return new WaitForSeconds (3);
+		StartCoroutine(WaveB3 ());
+	}
+
+	public IEnumerator WaveB3(){
+		tm_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		//_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		tr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		yield return new WaitForSeconds (3);
+		//		StartCoroutine(WaveB3 ());
 	}
 
 	// THIRD WAVE
@@ -153,9 +165,9 @@ public class WaveController : MonoBehaviour {
 
 	public IEnumerator WaveC1(){
 		// Spawn all left
-		fl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		bl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		fl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		tl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		bl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		yield return new WaitForSeconds (2);
 		StartCoroutine(WaveC2 ());
 	}
@@ -163,14 +175,27 @@ public class WaveController : MonoBehaviour {
 	public IEnumerator WaveC2(){
 		// Spawn All
 		tm_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		fl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		fl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		fr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		tl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		tr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		bl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		bl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		br_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		yield return new WaitForSeconds (4);
+		StartCoroutine(WaveC3());
+	}
+
+	public IEnumerator WaveC3(){
+		// Spawn All
+		tm_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		fl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		fr_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		tr_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		bl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		br_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		yield return new WaitForSeconds (2);
-//		StartCoroutine(WaveC ());
+		//		StartCoroutine(WaveC ());
 	}
 
 
