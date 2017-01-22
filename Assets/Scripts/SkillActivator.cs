@@ -19,6 +19,8 @@ public class SkillActivator : MonoBehaviour {
 
     void OnDisable ()
     {
+        if (tiki == null) return;
+
         tiki.enabled = false;
     }
 
