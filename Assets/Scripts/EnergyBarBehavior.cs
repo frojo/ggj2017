@@ -11,6 +11,8 @@ public class EnergyBarBehavior : MonoBehaviour {
     private Image image;
     public static EnergyBarBehavior instance { get; private set; }
 
+	public GameObject wave_controller;
+
     void Awake ()
     {
         instance = this;
@@ -23,10 +25,15 @@ public class EnergyBarBehavior : MonoBehaviour {
 
     void Start () {
         image = GetComponent<Image>();
+		wave_controller = GameObject.FindGameObjectWithTag ("WaveController");
+
         currentEnergy = 0;
     }
     
     void Update () {
+		if (currentEnergy == maxEnergy) {
+			wave_controller.GetComponent<WaveController>().NextWave ();
+		}
         IncreaseEnergy(Time.deltaTime);
         UpdateVisual();
     }

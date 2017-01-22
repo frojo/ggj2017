@@ -4,13 +4,12 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public GameObject lose_text;
+	public GameObject win_text;
 
 	// Use this for initialization
 	void Start () {
 		lose_text.SetActive (false);
-
-		// Should we do anything?
-	
+		win_text.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -18,8 +17,12 @@ public class GameController : MonoBehaviour {
 	
 	}
 
-	public void EndGame() {
-		lose_text.SetActive (true);
+	public void EndGame(bool win) {
+		if (win) {
+				win_text.SetActive(true);
+		} else {
+				lose_text.SetActive (true);
+		}
 		
 	}
 }

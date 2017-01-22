@@ -21,7 +21,7 @@ public class Island : MonoBehaviour {
 			Destroy(other.gameObject);
 
 
-			game_controller.GetComponent<GameController>().EndGame ();
+			game_controller.GetComponent<GameController>().EndGame (false);
 		}
 	}
 }

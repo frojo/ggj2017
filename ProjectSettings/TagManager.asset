@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Power
   - Island
+  - WaveController
+  - EnergyBar
   layers:
   - Default
   - TransparentFX

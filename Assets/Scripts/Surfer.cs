@@ -33,16 +33,4 @@ public class Surfer : MonoBehaviour {
 		transform.position = 
 			Vector2.MoveTowards (transform.position, end_point, speed * Time.deltaTime);
 	}
-
-	// Pushers/weapons call this to push the surfer away
-	public void InitiatePush (Vector2 push_destination, float push_speed) {
-		end_point = push_destination;
-		speed = push_speed;
-	}
-
-	// Pushers/weapons call this to end the push
-	public void EndPush () {
-		end_point = island_position;
-		speed = surf_speed;
-	}
 }
