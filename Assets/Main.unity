@@ -929,10 +929,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameobjectsToActivateOnWin:
-  - {fileID: 0}
+  - {fileID: 1323068691}
+  - {fileID: 2103311729}
   gameobjectsToActivateOnLose:
   - {fileID: 292443950}
   - {fileID: 1005385635}
+  - {fileID: 1323068691}
+  - {fileID: 2103311729}
   gameobjectsToDeactivateOnWin:
   - {fileID: 809765057}
   - {fileID: 1025893156}
@@ -1056,6 +1059,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1259426120}
   m_Script: {fileID: 11500000, guid: a680c938f62748e479f9a238915e8810, type: 3}
+--- !u!1 &1323068691 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013150300604, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007609877}
 --- !u!1001 &1323857841
 Prefab:
   m_ObjectHideFlags: 0
@@ -1948,17 +1956,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013751023048, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
+    - target: {fileID: 114000013237297014, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
         type: 2}
       propertyPath: skillActivator
       value: 
-      objectReference: {fileID: 1534957316}
+      objectReference: {fileID: 898677079}
     - target: {fileID: 114000012069898786, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
         type: 2}
       propertyPath: skillActivator
       value: 
       objectReference: {fileID: 1259426121}
-    - target: {fileID: 114000013237297014, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
+    - target: {fileID: 114000013751023048, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
         type: 2}
       propertyPath: skillActivator
       value: 
@@ -2050,3 +2058,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010134417690, guid: 1ca1b94e4d46647c7b1f911c65ce9934,
     type: 2}
   m_PrefabInternal: {fileID: 308621508}
+--- !u!1 &2103311729 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013771931214, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007609877}
