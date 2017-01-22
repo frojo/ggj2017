@@ -76,7 +76,7 @@ public class AnimationAngleSelector : MonoBehaviour {
                 break;
         }
 
-        if (toBeActive != null)
+        if (toBeActive != null && lastActive != toBeActive)
         {
             DisableGameObject(lastActive);
             toBeActive.SetActive(true);
