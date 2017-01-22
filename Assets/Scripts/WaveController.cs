@@ -34,10 +34,11 @@ public class WaveController : MonoBehaviour {
 //		}
 	}
 
-	void EndCurrentWave() {
+	public void EndCurrentWave() {
 		// Kill all the enemies on screen
 		GameObject[] all_enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+        StopAllCoroutines();
 		foreach (GameObject enemy in all_enemies) {
 			Destroy (enemy);
 		}
@@ -56,7 +57,7 @@ public class WaveController : MonoBehaviour {
 		case 2:
 			StartCoroutine (WaveC0());
 			break;
-		default:
+		case 3:
 			game_controller.GetComponent<GameController>().EndGame (true);
 			break;
 		}

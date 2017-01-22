@@ -3,30 +3,34 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+    private GameObject wave_controller;
 	public GameObject lose_text;
-	public GameObject win_text;
+    public GameObject win_text;
 
-	// Use this for initialization
+    public GameObject[] onEndListeners;
+
 	void Start () {
 		lose_text.SetActive (false);
 		win_text.SetActive (false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+        wave_controller = GameObject.FindGameObjectWithTag ("WaveController");
+    }
 
 	public void EndGame(bool win) {
 		if (win) {
 				win_text.SetActive(true);
+            foreach (var o in onEndListeners)
+            {
+                o.SendMessage("OnWin", SendMessageOptions.DontRequireReceiver);
+            }
 		} else {
-				lose_text.SetActive (true);
-		}
+            wave_controller.GetComponent<WaveController>().EndCurrentWave();
 
-		// Turn off powers
-		// Turn off spawners
+                lose_text.SetActive (true);
+            foreach (var o in onEndListeners)
+            {
+                o.SendMessage("OnLose", SendMessageOptions.DontRequireReceiver);
+            }
+        }
 
-		
-	}
+    }
 }
