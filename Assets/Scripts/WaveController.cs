@@ -20,7 +20,7 @@ public class WaveController : MonoBehaviour {
 	public GameObject[] waveTexts;
 	public GameObject waveWipe;
 
-	int current_wave = 0;
+	public int current_wave = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -58,12 +58,12 @@ public class WaveController : MonoBehaviour {
 		EndCurrentWave ();
 		switch (current_wave) {
 		case 1:
-			StartCoroutine(ShowWaveText (2));
+			StartCoroutine(ShowWaveText (1));
 			StartCoroutine (WaveB0());
 			break;
 		case 2:
 			//ShowWaveText (1);
-			StartCoroutine(ShowWaveText (3));
+			StartCoroutine(ShowWaveText (2));
 			StartCoroutine (WaveC0());
 			break;
 		case 3:
