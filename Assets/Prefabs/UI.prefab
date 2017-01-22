@@ -312,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotkey: 119
   energyCost: 20
+  activationListeners: []
 --- !u!114 &114000012505320638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotkey: 101
   energyCost: 50
+  activationListeners: []
 --- !u!114 &114000013339724062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -589,6 +591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotkey: 113
   energyCost: 1
+  activationListeners:
+  - {fileID: 0}
 --- !u!114 &114000013898429676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 10
-  energyGainRate: 1
+  energyGainRate: 0.5
 --- !u!114 &114000014161439950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -765,7 +769,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 58.84999, y: 268}
+  m_AnchoredPosition: {x: 58.850098, y: 268}
   m_SizeDelta: {x: 106.70001, y: 107.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012521134574
@@ -841,7 +845,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 58.849976, y: 161.84998}
+  m_AnchoredPosition: {x: 58.850098, y: 161.8501}
   m_SizeDelta: {x: 106.70001, y: 107.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013903801346

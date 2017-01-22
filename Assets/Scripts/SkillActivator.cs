@@ -4,11 +4,18 @@ using System.Collections;
 public class SkillActivator : MonoBehaviour {
 
     public GameObject pusher;
+    public TikiBehavior tiki;
 
-    void Start () {
-    
+    void OnEnable ()
+    {
+        tiki.enabled = true;
     }
-    
+
+    void OnDisable ()
+    {
+        tiki.enabled = false;
+    }
+
     void Update () {
         if (Input.GetMouseButtonUp(0))
         {
