@@ -17,12 +17,12 @@ public class AnimationAngleSelector : MonoBehaviour {
 
     public void SetDirection(Vector2 direction)
     {
-        DisableAll();
+        //DisableAll();
         dir = direction.normalized;
         UpdateVisual();
     }
 
-    void DisableAll ()
+    public void DisableAll ()
     {
         DisableGameObject(up);
         DisableGameObject(upRight);
@@ -76,7 +76,7 @@ public class AnimationAngleSelector : MonoBehaviour {
                 break;
         }
 
-        if (toBeActive != lastActive)
+        if (toBeActive != null)
         {
             DisableGameObject(lastActive);
             toBeActive.SetActive(true);

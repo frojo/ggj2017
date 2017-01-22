@@ -16,21 +16,30 @@ public class Surfer : MonoBehaviour {
 
 	float push_speed;
 
-	// Use this for initialization
-	void Start () {
+    AnimationAngleSelector angleSelector;
+
+    // Use this for initialization
+    void Start () {
         island = GameObject.FindGameObjectWithTag("Island");
         Debug.Assert(island != null, "no island found!", this);
         island_position = island.transform.position;
 		end_point = island_position;
 		speed = surf_speed;
 
-        var dir = end_point - new Vector2(transform.position.x, transform.position.y);
-        GetComponent<AnimationAngleSelector>().SetDirection(dir);
-	}
+        angleSelector = GetComponent<AnimationAngleSelector>();
+        angleSelector.DisableAll();
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        UpdateVisual();
 		transform.position = 
 			Vector2.MoveTowards (transform.position, end_point, speed * Time.deltaTime);
-	}
+    }
+
+    void UpdateVisual ()
+    {
+        var dir = island_position - new Vector2(transform.position.x, transform.position.y);
+        angleSelector.SetDirection(dir);
+    }
 }

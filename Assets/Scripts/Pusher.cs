@@ -28,8 +28,10 @@ public class Pusher : MonoBehaviour {
 		float angle = AngleBetweenTwoVectors (start_point, end_point);
 		transform.Rotate (Vector3.forward*angle);
 
-        GetComponent<AnimationAngleSelector>().SetDirection(direction);
-	}
+        var angleSelector = GetComponent<AnimationAngleSelector>();
+        angleSelector.DisableAll();
+        angleSelector.SetDirection(direction);
+    }
 
 	// Update is called once per frame
 	void Update () {

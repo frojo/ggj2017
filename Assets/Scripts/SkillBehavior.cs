@@ -9,6 +9,7 @@ public class SkillBehavior : MonoBehaviour {
     public float energyCost = 10;
     private EnergyBarBehavior energybar;
     private Button button;
+    public GameObject [] activationListeners;
 
     void Start () {
         energybar = EnergyBarBehavior.instance;
@@ -29,7 +30,10 @@ public class SkillBehavior : MonoBehaviour {
     {
         if (energybar.ConsumeEnergy(energyCost))
         {
-            Debug.Log("Skill Activated!");
+            foreach (GameObject o in activationListeners)
+            {
+                o.SetActive(true);
+            }
         }
         else
         {

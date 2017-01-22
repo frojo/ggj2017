@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pusher: {fileID: 1000012059353344, guid: 42dac91e376034e89800683e074deae5, type: 2}
+  tiki: {fileID: 0}
 --- !u!114 &114000012950339594
 MonoBehaviour:
   m_ObjectHideFlags: 1
