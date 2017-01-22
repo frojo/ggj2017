@@ -83,7 +83,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pusher: {fileID: 0}
+  attracter: {fileID: 1000010452810616, guid: 1e1b4475e1e134e018a28a18eb61d2b9, type: 2}
+  disruptor: {fileID: 0}
   tiki: {fileID: 0}
+  energyCost: 3
+  skillNumber: 2
 --- !u!114 &114000012156657506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,8 +126,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1834800823
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ec139b15563a775468d2719f3d4b60a4, type: 3}
   m_Color: {r: 0.125, g: 1, b: 0.67413783, a: 0.309}
   m_FlipX: 0
