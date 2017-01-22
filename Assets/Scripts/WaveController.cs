@@ -16,6 +16,9 @@ public class WaveController : MonoBehaviour {
 	public GameObject energy_bar;
 	public GameObject game_controller;
 
+	public GameObject[] waveTexts;
+	public GameObject waveWipe;
+
 	int current_wave = 0;
 
 	// Use this for initialization
