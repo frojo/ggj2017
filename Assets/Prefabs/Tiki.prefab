@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011102530162
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,11 +239,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
   - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
   - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
+  - {fileID: 21300000, guid: fb467319a6e4153478383fecbc4a17e1, type: 3}
+  - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
+  - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
+  - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
   - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
   - {fileID: 21300000, guid: 71291537267008745860d28c6eb59acf, type: 3}
   - {fileID: 21300000, guid: 164c171c195583846acba2d2c8de2ec6, type: 3}
   - {fileID: 21300000, guid: e6ad467c44bbe3043b0657a59c1c0a47, type: 3}
   fps: 6
+  loop: 1
 --- !u!114 &114000010430191056
 MonoBehaviour:
   m_ObjectHideFlags: 1

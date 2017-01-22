@@ -11,6 +11,8 @@ public class SpriteSheetAnimation : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private int currentIndex = 0;
 
+    public bool loop = true;
+
     void Start () {
         Debug.Assert(sprites.Length > 1, "sprites not set", this);
         frameDuration = 1.0f / fps;
@@ -33,12 +35,22 @@ public class SpriteSheetAnimation : MonoBehaviour {
         ++currentIndex;
         if (currentIndex >= sprites.Length)
         {
-            currentIndex = 0;
+            if (loop)
+            {
+                currentIndex = 0;
+            }
+            else
+            {
+                enabled = false;
+            }
         }
     }
 
     void UpdateVisual()
     {
-        spriteRenderer.sprite = sprites[currentIndex];
+        if (currentIndex < sprites.Length)
+        {
+            spriteRenderer.sprite = sprites[currentIndex];
+        }
     }
 }
