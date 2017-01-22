@@ -43,7 +43,7 @@ GameObject:
   - 82: {fileID: 82000011138168100}
   - 114: {fileID: 114000011780280274}
   m_Layer: 0
-  m_Name: Surfer
+  m_Name: BabySurfer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,6 +12,7 @@ public class WaveController : MonoBehaviour {
 	public GameObject br_spawner;
 
 	public GameObject baby_surfer;
+	public GameObject tourist_surfer;
 
 	public GameObject energy_bar;
 	public GameObject game_controller;
@@ -82,25 +83,29 @@ public class WaveController : MonoBehaviour {
 	// FIRST WAVE
 		
 	public IEnumerator WaveA0(){
-		tm_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		tm_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		yield return new WaitForSeconds (2);
 		StartCoroutine(WaveA1 ());
 	}
 
 	public IEnumerator WaveA1(){
-		tm_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		yield return new WaitForSeconds (2);
+		tm_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		tl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		tr_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		yield return new WaitForSeconds (3);
 		StartCoroutine(WaveA2 ());
 	}
 
 	public IEnumerator WaveA2(){
-		tl_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
-		yield return new WaitForSeconds (2);
+		fl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		fr_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		yield return new WaitForSeconds (1);
 		StartCoroutine(WaveA3 ());
 	}
 
 	public IEnumerator WaveA3(){
-		tr_spawner.GetComponent<Spawner> ().Spawn (baby_surfer);
+		fl_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
+		fr_spawner.GetComponent<Spawner> ().Spawn (tourist_surfer);
 		yield return new WaitForSeconds (0);
 		//EndWaveA ();
 		//StartCoroutine(Wave1 ());
