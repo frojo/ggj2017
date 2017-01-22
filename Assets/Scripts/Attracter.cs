@@ -38,6 +38,7 @@ public class Attracter : MonoBehaviour {
 
 	void OnDestroy() {
 		foreach (GameObject enemy in attracted_enemies) {
+            if (enemy == null) continue;
 			enemy.GetComponent<Surfer> ().end_point =
 				island.transform.position;
 		}
