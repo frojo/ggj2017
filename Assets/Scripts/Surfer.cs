@@ -11,7 +11,7 @@ public class Surfer : MonoBehaviour {
 	// How fast the surfer approaches the island
 	public float surf_speed;
 
-	Vector2 end_point;
+	public Vector2 end_point;
 	float speed;
 
 	float push_speed;

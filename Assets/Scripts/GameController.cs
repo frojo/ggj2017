@@ -23,6 +23,10 @@ public class GameController : MonoBehaviour {
 		} else {
 				lose_text.SetActive (true);
 		}
+
+		// Turn off powers
+		// Turn off spawners
+
 		
 	}
 }

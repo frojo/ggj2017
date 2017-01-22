@@ -8,7 +8,6 @@ public class Island : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		game_controller = GameObject.FindGameObjectWithTag ("GameController");
-	
 	}
 	
 	// Update is called once per frame
