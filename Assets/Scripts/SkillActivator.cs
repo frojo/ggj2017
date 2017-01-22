@@ -19,9 +19,9 @@ public class SkillActivator : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonUp(0))
         {
+            gameObject.SetActive(false);
             InstantiatePusher (
                 Camera.main.ScreenToWorldPoint (Input.mousePosition));
-            gameObject.SetActive(false);
         }
     }
 
