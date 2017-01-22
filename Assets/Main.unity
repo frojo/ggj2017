@@ -1013,6 +1013,26 @@ Prefab:
       propertyPath: tiki
       value: 
       objectReference: {fileID: 1749535337}
+    - target: {fileID: 1000010728622826, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011652571184, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011082574672, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 7.097638
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011082574672, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 7.0976357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011082574672, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.91828
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79dc923603c42c34aabc40d7b8b51588, type: 2}
   m_IsPrefabParent: 0
