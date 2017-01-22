@@ -7,13 +7,53 @@ public class GameController : MonoBehaviour {
 	public GameObject lose_text;
     public GameObject win_text;
 
+	public GameObject title_screen;
+
+	public GameObject[] premiseScreens;
+	private int premiseScreenNum = -1;
+//	public GameObject premise_screen1;
+//	public GameObject premise_screen2;
+//	public GameObject premise_screen3;
+
+	public GameObject[] gameobjectsToActivateOnStart;
+
     public GameObject[] onEndListeners;
 
 	void Start () {
 		lose_text.SetActive (false);
 		win_text.SetActive (false);
         wave_controller = GameObject.FindGameObjectWithTag ("WaveController");
+
+
     }
+
+	void Update() {
+		if (Input.GetMouseButtonDown (0)) {
+			NextScreen ();
+		}
+	}
+
+	private void NextScreen() {
+		if (premiseScreenNum < 0) {
+			title_screen.SetActive (false);
+		} else {
+			premiseScreens [premiseScreenNum].SetActive (false);
+		}
+
+		premiseScreenNum++;
+		if (premiseScreenNum == premiseScreens.Length) {
+			StartGamePlay ();
+		} else {
+			premiseScreens [premiseScreenNum].SetActive (true);
+		}
+
+	}
+
+	public void StartGamePlay() {
+		foreach (var obj in gameobjectsToActivateOnStart) {
+			obj.SetActive (true);
+		}
+	}
 
 	public void EndGame(bool win) {
 		if (win) {
