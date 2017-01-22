@@ -40,6 +40,8 @@ GameObject:
   - 50: {fileID: 50000012430415486}
   - 114: {fileID: 114000012624503084}
   - 114: {fileID: 114000012840971748}
+  - 82: {fileID: 82000011138168100}
+  - 114: {fileID: 114000011780280274}
   m_Layer: 0
   m_Name: Surfer
   m_TagString: Enemy
@@ -229,6 +231,81 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.37
+--- !u!82 &82000011138168100
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012085981644}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000012569121628, guid: bd91d1bbd9746c34a8775f71738c30d8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: acbbba11d6f52a84cb7f7203f41ab276, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010564277272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +327,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b37f60f87bfbb674b8e54cd89126a410, type: 3}
   - {fileID: 21300000, guid: 80ae56d807f28e543b9b2030e10b86f2, type: 3}
   fps: 12
+  loop: 1
 --- !u!114 &114000011168075842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,6 +349,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5f90c5994d4d92642856e1348ec7d6b8, type: 3}
   - {fileID: 21300000, guid: 2fdea6583ef499140874e9de0bcb3a9a, type: 3}
   fps: 12
+  loop: 1
+--- !u!114 &114000011780280274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012085981644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b49762e852e214590405a242aa39d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012210069744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +382,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 236c20095845ca947bb391dad5894e64, type: 3}
   - {fileID: 21300000, guid: 00d8088795256ee408d5785a74911227, type: 3}
   fps: 12
+  loop: 1
 --- !u!114 &114000012624503084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surf_speed: 1
+  end_point: {x: 0, y: 0}
 --- !u!114 &114000012840971748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,6 +436,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4426724631af2d04093fae9b6e0ed76e, type: 3}
   - {fileID: 21300000, guid: bbc014c1194ae654c83f981aa07d3f49, type: 3}
   fps: 12
+  loop: 1
 --- !u!114 &114000014237243058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,6 +458,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c74e9abb01201442afbb5cf52f242d1, type: 3}
   - {fileID: 21300000, guid: 66c062b75a5f0e845a3854fab4349736, type: 3}
   fps: 12
+  loop: 1
 --- !u!212 &212000010493179646
 SpriteRenderer:
   m_ObjectHideFlags: 1
