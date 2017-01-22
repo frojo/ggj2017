@@ -20,6 +20,9 @@ public class WaveController : MonoBehaviour {
 	public GameObject[] waveTexts;
 	public GameObject waveWipe;
 
+	public GameObject mermaidSkill;
+	public GameObject whaleSkill;
+
 	public int current_wave = 0;
 
 	// Use this for initialization
@@ -58,11 +61,13 @@ public class WaveController : MonoBehaviour {
 		EndCurrentWave ();
 		switch (current_wave) {
 		case 1:
+			mermaidSkill.SetActive (true);
 			StartCoroutine(ShowWaveText (1));
 			StartCoroutine (WaveB0());
 			break;
 		case 2:
 			//ShowWaveText (1);
+			whaleSkill.SetActive(true);
 			StartCoroutine(ShowWaveText (2));
 			StartCoroutine (WaveC0());
 			break;

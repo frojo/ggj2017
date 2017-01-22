@@ -262,7 +262,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1486703140}
   m_Father: {fileID: 1245876005}
   m_RootOrder: 1
 --- !u!1 &674453354
@@ -511,6 +512,9 @@ MonoBehaviour:
   - {fileID: 1633113053}
   - {fileID: 1815340571}
   waveWipe: {fileID: 0}
+  mermaidSkill: {fileID: 0}
+  whaleSkill: {fileID: 0}
+  current_wave: 0
 --- !u!4 &1005385637
 Transform:
   m_ObjectHideFlags: 0
@@ -1351,6 +1355,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ca1b94e4d46647c7b1f911c65ce9934, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1486703139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1486703140}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486703140
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486703139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 517602477}
+  m_RootOrder: 0
 --- !u!1001 &1492510900
 Prefab:
   m_ObjectHideFlags: 0
