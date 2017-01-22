@@ -224,6 +224,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose_text: {fileID: 1082657346}
   win_text: {fileID: 1402230764}
+  title_screen: {fileID: 0}
+  premiseScreens: []
+  gameobjectsToActivateOnStart: []
   onEndListeners:
   - {fileID: 208823469}
 --- !u!4 &208823471
@@ -1279,6 +1282,12 @@ Prefab:
       propertyPath: tiki
       value: 
       objectReference: {fileID: 1749535337}
+    - target: {fileID: 114000010193730832, guid: 63eacb5a8142b3c4e8639b7f37e99c5c,
+        type: 2}
+      propertyPath: disruptor
+      value: 
+      objectReference: {fileID: 1000012446264016, guid: 31f39982ffb454cb0b160c8fda83c7a9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63eacb5a8142b3c4e8639b7f37e99c5c, type: 2}
   m_IsPrefabParent: 0

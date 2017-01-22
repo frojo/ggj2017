@@ -29,7 +29,9 @@ public class GameController : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetMouseButtonDown (0)) {
-			NextScreen ();
+			if (premiseScreenNum < premiseScreens.Length) {
+				NextScreen ();
+			}
 		}
 	}
 
