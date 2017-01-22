@@ -22,7 +22,7 @@ public class AnimationAngleSelector : MonoBehaviour {
         UpdateVisual();
     }
 
-    void DisableAll ()
+    public void DisableAll ()
     {
         DisableGameObject(up);
         DisableGameObject(upRight);
