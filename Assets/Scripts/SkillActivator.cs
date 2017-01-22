@@ -4,8 +4,11 @@ using System.Collections;
 public class SkillActivator : MonoBehaviour {
 
     public GameObject pusher;
+	public GameObject attracter;
     public TikiBehavior tiki;
     public float energyCost = 1;
+
+	public int skillNumber;
 
     void OnEnable ()
     {
@@ -22,10 +25,28 @@ public class SkillActivator : MonoBehaviour {
         {
             EnergyBarBehavior.instance.ConsumeEnergy(energyCost);
             gameObject.SetActive(false);
-            InstantiatePusher (
-                Camera.main.ScreenToWorldPoint (Input.mousePosition));
+
+			Vector2 mouse_world_position = 
+				Camera.main.ScreenToWorldPoint (
+					Input.mousePosition);
+
+			switch (skillNumber) {
+			case 1:
+				InstantiatePusher (mouse_world_position);
+				break;
+			case 2:
+				InstantiateAttracter (mouse_world_position);
+				break;
+			default:
+				break;
+			}
         }
     }
+
+	void InstantiateAttracter(Vector2 mouse_world_position) {
+		attracter.transform.position = mouse_world_position;
+		Instantiate (attracter);
+	}
 
     void InstantiatePusher(Vector2 mouse_world_position) {
 

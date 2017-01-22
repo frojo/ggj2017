@@ -16,7 +16,7 @@ public class Attracter : MonoBehaviour {
 
 		attracted_enemies = new List<GameObject> ();
 
-		StartCoroutine (DisappearInXSeconds (duration));
+		//StartCoroutine (DisappearInXSeconds (duration));
 	
 	}
 	
@@ -28,16 +28,23 @@ public class Attracter : MonoBehaviour {
 	IEnumerator DisappearInXSeconds(float x) {
 		yield return new WaitForSeconds (x);
 		foreach (GameObject enemy in attracted_enemies) {
+			if (enemy) {
+				enemy.GetComponent<Surfer> ().end_point =
+					island.transform.position;
+			}
+		}
+		Destroy (gameObject);
+	}
+
+	void OnDestroy() {
+		foreach (GameObject enemy in attracted_enemies) {
 			enemy.GetComponent<Surfer> ().end_point =
 				island.transform.position;
 		}
-		print ("Okay time to destroy things!");
-		Destroy (gameObject);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Enemy") {
-			print ("Surfer in mermaid!");
 			attracted_enemies.Add (other.gameObject);
 			other.GetComponent<Surfer> ().end_point = 
 				transform.position;
