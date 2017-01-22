@@ -255,12 +255,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose_text: {fileID: 1082657346}
   win_text: {fileID: 1402230764}
-  title_screen: {fileID: 0}
+  title_screen: {fileID: 756809207}
   premiseScreens:
   - {fileID: 418926894}
   - {fileID: 2032012354}
   - {fileID: 1664850189}
-  gameobjectsToActivateOnStart: []
+  gameobjectsToActivateOnStart:
+  - {fileID: 1005385635}
+  - {fileID: 1697884467}
   onEndListeners:
   - {fileID: 208823469}
 --- !u!4 &208823471
@@ -1652,6 +1654,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 191959947}
   m_RootOrder: 2
+--- !u!1 &1697884467 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013936854882, guid: 3e6fd4e13f860fd45b8982a2e3cf8a6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007609877}
 --- !u!114 &1749535337 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010430191056, guid: 2af56a70241f6fa44ba01883163fd61c,
