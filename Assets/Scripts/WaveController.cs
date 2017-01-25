@@ -61,7 +61,9 @@ public class WaveController : MonoBehaviour {
 
 	public void NextWave() {
 		current_wave++;
+		Instantiate (waveWipe);
 		EndCurrentWave ();
+
 		switch (current_wave) {
 		case 1:
 			mermaidSkill.SetActive (true);
