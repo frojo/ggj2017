@@ -56,6 +56,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WaveWipe
+    uniqueID: 4150900257
+    locked: 0
   - name: Top Text
     uniqueID: 2403442729
     locked: 0
