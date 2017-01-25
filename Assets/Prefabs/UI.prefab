@@ -953,7 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 10
-  energyGainRate: 0.8
+  energyGainRate: 1.3
   wave_controller: {fileID: 0}
 --- !u!114 &114000014141356108
 MonoBehaviour:
